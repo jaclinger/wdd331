@@ -1,0 +1,167 @@
+/* ========================================
+   TOKENS
+   Define your design decisions here.
+   Everything else in this file should
+   reference these tokens with var().
+   ======================================== */
+:root {
+    /* Colors */
+    --color-primary: #4f46e5;
+    --color-background: #0f172a;
+    --color-text: #e2e8f0;
+    --color-accent: #f97316;
+
+    /* Spacing */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+
+    /* Typography */
+    --font-family-base: system-ui, sans-serif;
+    --font-size-base: 1rem;
+
+    /* Borders */
+    --radius-md: 12px;
+}
+
+/* ========================================
+   RESET
+   A minimal reset so you start clean.
+   ======================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+body {
+    font-family: var(--font-family-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+
+    /* clamp() for fluid padding */
+    padding: clamp(1rem, 2vw, 2rem);
+
+    a {
+        color: var(--color-accent);
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.site-nav {
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+    background: var(--color-primary);
+    border-radius: var(--radius-md);
+}
+
+/* ========================================
+   BOARD HEADER
+   ======================================== */
+.board-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    padding: var(--space-md);
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    p {
+        color: color-mix(in srgb, var(--color-text) 70%, transparent);
+        margin-top: var(--space-sm);
+    }
+}
+
+/* ========================================
+   CARD GROUP
+   ======================================== */
+.card-group {
+    margin-bottom: var(--space-lg);
+
+    h2 {
+        margin-bottom: var(--space-md);
+        font-size: 1.25rem;
+    }
+}
+
+/* ========================================
+   CARDS GRID
+   ======================================== */
+.cards {
+    display: grid;
+
+    /* calc() based spacing */
+    gap: calc(var(--space-md) * 1.5);
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ========================================
+   INDIVIDUAL CARD
+   ======================================== */
+.card {
+    background: var(--card-bg, #1e293b); /* var() fallback */
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    .card-tag {
+        display: inline-block;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        background: var(--color-accent);
+        color: white;
+        border-radius: var(--radius-md);
+        margin-bottom: var(--space-sm);
+    }
+
+    h3 {
+        margin-bottom: var(--space-sm);
+    }
+
+    p {
+        margin-bottom: var(--space-md);
+    }
+
+    .card-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+
+        span {
+            opacity: 0.7;
+        }
+
+        a {
+            color: var(--color-accent);
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.board-footer {
+    text-align: center;
+    padding: var(--space-lg);
+    color: color-mix(in srgb, var(--color-text) 60%, transparent);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
