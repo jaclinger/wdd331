@@ -1,0 +1,23 @@
+/* Navigation component: .site-nav and its links
+   Style the active link using aria-current. */
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: var(--space-lg);
+
+    ul {
+        display: flex;
+        gap: var(--space-md);
+    }
+
+    a:not([aria-current="page"]) {
+        opacity: 0.8;
+    }
+
+    a[aria-current="page"] {
+        font-weight: bold;
+    }
+}
