@@ -1,13 +1,44 @@
-/* Non-color tokens: spacing, typography, borders, shadows.
-   These values should be referenced by every other layer. */
+/* Non-color tokens */
+
 :root {
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
+    /* Typography */
+    --font-family-sans: system-ui, sans-serif;
+    --font-family-mono: monospace;
 
-    --font-family-base: system-ui, sans-serif;
+    --font-size-sm: 1.4rem;
+    --font-size-md: 1.6rem;
+    --font-size-lg: 1.8rem;
 
-    --radius-md: 12px;
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
 
+    /* Legacy names */
+    --space-sm: var(--spacing-sm);
+    --space-md: var(--spacing-md);
+    --space-lg: var(--spacing-lg);
+
+    /* Radii */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    /* Transitions */
+    --transition-base: 0.2s ease;
+
+    /* Icons */
+    --icon-size-sm: 24px;
+    --icon-size-md: 32px;
+
+    /* Focus */
+    --outline-width: 2px;
+
+    /* Font compatibility */
+    --font-family-base: var(--font-family-sans);
+
+    /* Shadows */
     --shadow-md: 0 4px 10px rgb(0 0 0 / 0.1);
 }

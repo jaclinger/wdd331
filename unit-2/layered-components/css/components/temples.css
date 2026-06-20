@@ -1,6 +1,3 @@
-/* Temple list component: .temples, .temple-name, .temple-status
-   Style the status badges differently based on class (.open, .construction). */
-
 .temples {
     display: grid;
     gap: var(--space-sm);
@@ -10,6 +7,7 @@
         justify-content: space-between;
 
         background: var(--color-surface);
+        color: var(--color-text);
 
         padding: var(--space-md);
 
@@ -18,9 +16,9 @@
 }
 
 .temple-status.open {
-    color: green;
+    color: var(--color-success);
 }
 
 .temple-status.construction {
-    color: darkorange;
+    color: var(--color-warning);
 }
