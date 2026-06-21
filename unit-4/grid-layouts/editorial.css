@@ -1,0 +1,73 @@
+/* Editorial Layout */
+
+.editorial-page {
+    font-family: var(--font-family-body, system-ui);
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+/* Header layout (nav + links) */
+.editorial-page header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.editorial-page header nav {
+    display: flex;
+    gap: var(--space-md);
+}
+
+/* MAIN GRID LAYOUT */
+.editorial-page .layout {
+    display: grid;
+    grid-template-areas:
+        "main"
+        "aside";
+    gap: var(--space-lg);
+    padding: var(--space-md);
+}
+
+/* Wider screen layout */
+@media (min-width: 800px) {
+    .editorial-page .layout {
+        grid-template-columns: 1fr 280px;
+        grid-template-areas: "main aside";
+    }
+}
+
+/* Assign areas */
+.editorial-page main {
+    grid-area: main;
+}
+
+.editorial-page aside {
+    grid-area: aside;
+}
+
+/* Sidebar styling */
+.editorial-page aside {
+    background: var(--color-surface);
+    padding: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+/* Article typography spacing */
+.editorial-page article h1 {
+    font-size: var(--font-size-xl);
+}
+
+.editorial-page article h2 {
+    margin-top: var(--space-lg);
+}
+
+/* Footer */
+.editorial-page footer {
+    text-align: center;
+    padding: var(--space-lg);
+    color: var(--color-text-muted);
+}

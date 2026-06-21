@@ -11,16 +11,46 @@
 </head>
 <body>
 
- <nav class="site-nav">
+<nav class="site-nav">
     <a href="../../index.html">&larr; Home</a>
+
     <ul>
         <li><a href="#">Gallery</a></li>
         <li><a href="#" aria-current="page">Effects</a></li>
         <li><a href="#">About</a></li>
     </ul>
+
+    <!-- THEME TOGGLE (THIS WAS MISSING) -->
+    <details class="theme-menu">
+        <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+        </summary>
+
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+
+            <label class="theme-control theme-pick" data-theme-pick="light">
+                <input name="theme-preference" type="radio" value="light">
+                <span aria-hidden="true">☀️</span>
+                <span class="visually-hidden">Light</span>
+            </label>
+
+            <label class="theme-control theme-pick" data-theme-pick="system">
+                <input name="theme-preference" type="radio" value="system" checked>
+                <span aria-hidden="true">⚙️</span>
+                <span class="visually-hidden">System default</span>
+            </label>
+
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+                <input name="theme-preference" type="radio" value="dark">
+                <span aria-hidden="true">🌙</span>
+                <span class="visually-hidden">Dark</span>
+            </label>
+
+        </div>
+    </details>
 </nav>
 
-<!-- HERO: Use a gradient overlay and text-shadow for depth -->
+<!-- HERO -->
 <header class="hero">
     <img
         class="hero-image"
@@ -34,92 +64,66 @@
 </header>
 
 <main>
-    <!-- CARDS: Elevation shadows, hover transitions -->
+
     <section class="card-section">
         <h2>Elevation Cards</h2>
         <div class="cards">
+
             <article class="card">
-                <img
-                    class="card-image"
-                    src="https://picsum.photos/seed/card-1/400/250"
-                    alt="Placeholder image"
-                >
+                <img class="card-image" src="https://picsum.photos/seed/card-1/400/250" alt="">
                 <div class="card-body">
                     <h3>Layered Shadows</h3>
-                    <p>
-                        Multiple shadow layers create realistic depth
-                        that changes on hover.
-                    </p>
+                    <p>Multiple shadow layers create realistic depth that changes on hover.</p>
                 </div>
             </article>
 
             <article class="card">
-                <img
-                    class="card-image"
-                    src="https://picsum.photos/seed/card-2/400/250"
-                    alt="Placeholder image"
-                >
+                <img class="card-image" src="https://picsum.photos/seed/card-2/400/250" alt="">
                 <div class="card-body">
                     <h3>Gradient Surfaces</h3>
-                    <p>
-                        A subtle gradient on the card background adds
-                        dimension without distracting from content.
-                    </p>
+                    <p>A subtle gradient adds dimension without distraction.</p>
                 </div>
             </article>
 
             <article class="card">
-                <img
-                    class="card-image"
-                    src="https://picsum.photos/seed/card-3/400/250"
-                    alt="Placeholder image"
-                >
+                <img class="card-image" src="https://picsum.photos/seed/card-3/400/250" alt="">
                 <div class="card-body">
                     <h3>Filtered Images</h3>
-                    <p>
-                        A grayscale or sepia filter on the image that
-                        lifts on hover draws attention to active cards.
-                    </p>
+                    <p>Filters change on hover to draw attention to active cards.</p>
                 </div>
             </article>
+
         </div>
     </section>
 
-    <!-- GLASS PANEL: backdrop-filter for frosted glass -->
     <section class="glass-section">
         <div class="glass-background">
             <img
                 src="https://picsum.photos/seed/glass-bg/1200/400"
-                alt="Background image behind glass panel"
+                alt=""
                 class="glass-bg-image"
             >
         </div>
+
         <div class="glass-panel">
             <h2>Frosted Glass</h2>
             <p>
-                This panel uses backdrop-filter to blur and saturate the
-                image behind it. The text stays sharp while the background
-                softens into a frosted surface.
+                This panel uses backdrop-filter to blur and saturate the image behind it.
             </p>
         </div>
     </section>
 
-    <!-- ICON ROW: drop-shadow on transparent images -->
     <section class="icon-section">
-        <h2>Drop Shadow on Transparent Images</h2>
-        <p>
-            These icons use drop-shadow() instead of box-shadow so the shadow
-            follows the actual shape of each image rather than its bounding box.
-        </p>
+        <h2>Drop Shadow Icons</h2>
+
         <div class="icon-row">
-            <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/heart.svg" alt="Heart icon">
-            <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/star.svg" alt="Star icon">
-            <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/bookmark.svg" alt="Bookmark icon">
-            <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/message-circle.svg" alt="Message icon">
+            <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/heart.svg" alt="">
+            <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/star.svg" alt="">
+            <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/bookmark.svg" alt="">
+            <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/message-circle.svg" alt="">
         </div>
     </section>
 
-    <!-- CHOOSE TOPIC: Add your own section here if applicable -->
 </main>
 
 <footer class="site-footer">
