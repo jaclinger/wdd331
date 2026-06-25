@@ -1,43 +1,72 @@
 :root {
-    /* Typography */
-    --font-family-sans: system-ui, sans-serif;
-    --font-family-mono: monospace;
+    /* =========================
+       FONT FAMILIES
+       ========================= */
 
-    --font-size-sm: 1.4rem;
-    --font-size-md: 1.6rem;
-    --font-size-lg: 1.8rem;
+    --font-family-heading: "Inter", system-ui, sans-serif;
+    --font-family-body: system-ui, sans-serif;
+    --font-family-mono: ui-monospace, monospace;
 
-    /* Spacing */
+    /* fallback alias (used across site) */
+    --font-family-base: var(--font-family-body);
+
+    /* =========================
+       MODULAR TYPE SCALE
+       Ratio-based fluid system
+       ========================= */
+
+    --font-size-100: 0.8rem;
+    --font-size-200: 1rem;
+
+    --font-size-300: clamp(1.1rem, 1rem + 0.3vw, 1.25rem);
+    --font-size-400: clamp(1.25rem, 1.1rem + 0.5vw, 1.6rem);
+    --font-size-500: clamp(1.6rem, 1.3rem + 0.8vw, 2rem);
+    --font-size-600: clamp(2rem, 1.6rem + 1.2vw, 2.6rem);
+    --font-size-700: clamp(2.6rem, 2rem + 1.6vw, 3.4rem);
+
+    /* =========================
+       SEMANTIC TYPOGRAPHY ROLES
+       ========================= */
+
+    --font-size-caption: var(--font-size-200);
+    --font-size-body: var(--font-size-300);
+
+    --font-size-heading-sm: var(--font-size-500);
+    --font-size-heading-lg: var(--font-size-600);
+    --font-size-display: var(--font-size-700);
+
+    /* Line heights */
+    --line-height-body: 1.6;
+    --line-height-heading: 1.2;
+    --line-height-display: 1.1;
+
+    /* =========================
+       SPACING
+       ========================= */
+
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
 
-    /* Legacy names */
+    /* Legacy aliases */
     --space-sm: var(--spacing-sm);
     --space-md: var(--spacing-md);
     --space-lg: var(--spacing-lg);
 
-    /* Radii */
+    /* =========================
+       RADII
+       ========================= */
+
     --radius-sm: 4px;
     --radius-md: 6px;
     --radius-lg: 8px;
 
-    /* Transitions */
-    --transition-base: 0.2s ease;
+    /* =========================
+       SHADOWS
+       ========================= */
 
-    /* Icons */
-    --icon-size-sm: 24px;
-    --icon-size-md: 32px;
-
-    /* Focus */
-    --outline-width: 2px;
-
-    /* Font compatibility */
-    --font-family-base: var(--font-family-sans);
-
-    /* Shadows */
     --shadow-sm:
         0 2px 4px rgb(0 0 0 / 0.08),
         0 1px 2px rgb(0 0 0 / 0.06);
@@ -49,4 +78,21 @@
     --shadow-lg:
         0 16px 32px rgb(0 0 0 / 0.16),
         0 8px 16px rgb(0 0 0 / 0.12);
+
+    /* =========================
+       MOTION + UI TOKENS
+       ========================= */
+
+    --transition-base: 0.2s ease;
+
+    --icon-size-sm: 24px;
+    --icon-size-md: 32px;
+
+    --outline-width: 2px;
+
+    /* =========================
+       FONT SYSTEM BASE ALIAS
+       ========================= */
+
+    --font-family-base: var(--font-family-body);
 }
