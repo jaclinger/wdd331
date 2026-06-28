@@ -94,5 +94,11 @@
        FONT SYSTEM BASE ALIAS
        ========================= */
 
-    --font-family-base: var(--font-family-body);
+   
+
+    
+
+    accent-color: var(--color-accent);
+
 }
+

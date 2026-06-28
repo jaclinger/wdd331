@@ -40,3 +40,53 @@ header {
 h1 {
     font-size: 2rem;
 }
+
+@media print{
+
+nav,
+footer,
+button{
+
+    display:none;
+
+}
+
+body{
+
+    font-family:"Times New Roman",serif;
+
+    font-size:12pt;
+
+    color:black;
+
+}
+
+a::after{
+
+    content:" (" attr(href) ")";
+
+    font-size:10pt;
+
+}
+
+article{
+
+    break-inside:avoid;
+
+}
+
+p{
+
+    orphans:3;
+
+    widows:3;
+
+}
+
+.resume h1{
+
+    print-color-adjust:exact;
+
+}
+
+}
